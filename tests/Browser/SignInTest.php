@@ -30,6 +30,20 @@ class SignInTest extends DuskTestCase
                 ->type('@password-input', 'password')
                 ->press('@sign-in-button')
                 ->assertPathIs('/product');
+
+            $browser->logout();
+        });
+    }
+
+    public function testUnsuccessfulSignIn(): void
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/login')
+                ->type('@email-input', 'test@example.com')
+                ->type('@password-input', 'wrong_password')
+                ->press('@sign-in-button')
+                ->assertSee('These credentials do not match our records.')
+                ->assertPathIs('/login');
         });
     }
 }
