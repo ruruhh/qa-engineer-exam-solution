@@ -21,6 +21,13 @@ class DatabaseSeeder extends Seeder
         $this->command->info("Email: $admin->email");
         $this->command->info("Password: password");
 
+        Admin::create([
+            'name' => 'Admin User',
+            'email' => 'admin@example.com',
+            'email_verified_at' => now(),
+            'password' => bcrypt('password')
+        ]);
+
         \App\Models\Product::factory(50)->create();
 
         // \App\Models\User::factory()->create([
