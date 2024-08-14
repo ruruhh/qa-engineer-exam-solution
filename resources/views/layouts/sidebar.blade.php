@@ -13,20 +13,20 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-header text-uppercase">Products</li>
                 <li class="nav-item">
-                    <a href="{{ route('product.index') }}" class="nav-link {{ Route::is('product.index') ? 'active' : '' }}">
+                    <a href="{{ route('product.index') }}" class="nav-link {{ Route::is('product.index') ? 'active' : '' }}" dusk="list-nav-button">
                         <i class="nav-icon fas fa-list"></i>
                         <p>List</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('product.form') }}" class="nav-link {{ Route::is('product.form') ? 'active' : '' }}">
+                    <a href="{{ route('product.form') }}" class="nav-link {{ Route::is('product.form') ? 'active' : '' }}" dusk="create-nav-button">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>Create</p>
                     </a>
                 </li>
                 <li class="nav-header"></li>
                 <li class="nav-item">
-                    <a href="{{ route('videos') }}" class="nav-link {{ Route::is('videos') ? 'active' : '' }}">
+                    <a href="{{ route('videos') }}" class="nav-link {{ Route::is('videos') ? 'active' : '' }}" dusk="videos-nav-button">
                         <i class="nav-icon fas fa-video"></i>
                         <p>Videos</p>
                     </a>
